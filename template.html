@@ -3,18 +3,19 @@
    <head>
       <meta charset="utf-8">
       <title>Nom - Prenom</title>
-      <link rel="stylesheet" href="src/css/main.css" charset="utf-8">
+      <link rel="stylesheet" href="src/css/reset.css" charset="utf-8">
+      <link rel="stylesheet" href="src/css/main.css"  charset="utf-8">
    </head>
    <body>
       <header>
          <nav>
             <ul>
-               <li><a href="#">Pers1</a></li>
-               <li><a href="#">Pers2</a></li>
-               <li><a href="#">Pers3</a></li>
+               <li><a href="#" class="dia">Pers1</a></li>
+               <li><a href="#" class="enz">Pers2</a></li>
+               <li><a href="#" class="lea">Pers3</a></li>
             </ul>
-         </nav>
-         <div> <!-- resume -->
+         </nav><!-- no space
+      --><div> <!-- resume -->
             <img src="pers.png" alt="Nom - Prenom" />
             <div> <!-- resume content -->
                <p>Mox dicta finierat, multitudo omnis ad, quae imperator voluit, promptior laudato consilio consensit in pacem ea ratione maxime percita, quod norat expeditionibus crebris fortunam eius in malis tantum civilibus vigilasse, cum autem bella moverentur externa, accidisse plerumque luctuosa, icto post haec foedere gentium ritu perfectaque sollemnitate imperator Mediolanum ad hiberna discessit.</p>
@@ -24,30 +25,30 @@
       </header>
 
       <div id="container">
-         <section>
-            Experience
-            <div> <!-- big container -->
+        <section>
+         <div class="name" onclick="alert('Centres d interets');"><div>Centres d'interets</div></div><!--
+         --><div> <!-- big container -->
+
+           </div>
+         </section><!--
+      --><section>
+            <div class="name" onclick="alert('Competence');"><div>Competence</div></div><!--
+         --><div> <!-- big container -->
 
             </div>
-         </section>
-         <section>
-            Formation
-            <div> <!-- big container -->
+        </section><!--
+      --><section>
+            <div class="name" onclick="alert('Formation');"><div>Formation</div></div><!--
+         --><div> <!-- big container -->
 
             </div>
-         </section>
-         <section>
-            Competence
-            <div> <!-- big container -->
-
+         </section><!--
+      --><section>
+            <div class="name" onclick="alert('Experience');"><div>Experience</div></div><!--
+         --><div id="activated"> <!-- big container -->
+              text
             </div>
-         </section>
-         <section>
-            Centres d'interets
-            <div> <!-- big container -->
-
-            </div>
-         </section>
+          </section>
       </div>
    </body>
 </html>
