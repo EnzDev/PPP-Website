@@ -5,14 +5,15 @@
       <title>Nom - Prenom</title>
       <link rel="stylesheet" href="src/css/reset.css" charset="utf-8">
       <link rel="stylesheet" href="src/css/main.css"  charset="utf-8">
+      <script src="src/main.js" charset="utf-8"></script>
    </head>
    <body>
       <header>
          <nav>
             <ul>
-               <li><a href="#" class="dia">Pers1</a></li>
-               <li><a href="#" class="enz">Pers2</a></li>
-               <li><a href="#" class="lea">Pers3</a></li>
+               <li><a href="#" class="dia">Diane Robert</a></li>
+               <li><a href="#" class="enz">Enzo Mallard</a></li>
+               <li><a href="#" class="lea">Lea Le Bert</a></li>
             </ul>
          </nav><!-- no space
       --><div> <!-- resume -->
@@ -24,28 +25,28 @@
          </div>
       </header>
 
-      <div id="container">
-        <section>
-         <div class="name" onclick="alert('Centres d interets');"><div>Centres d'interets</div></div><!--
-         --><div> <!-- big container -->
+      <div id="container" class="cor">
+        <section id="int" onclick="switchContainer('int');">
+            <div class="name"><div>Centres d'interets</div></div><!--
+         --><div class="big" > <!-- big container -->
 
            </div>
          </section><!--
-      --><section>
-            <div class="name" onclick="alert('Competence');"><div>Competence</div></div><!--
-         --><div> <!-- big container -->
+      --><section id="com" onclick="switchContainer('com');">
+            <div class="name"><div>Competence</div></div><!--
+         --><div class="big" > <!-- big container -->
 
             </div>
         </section><!--
-      --><section>
-            <div class="name" onclick="alert('Formation');"><div>Formation</div></div><!--
-         --><div> <!-- big container -->
+      --><section id="for" onclick="switchContainer('for');">
+            <div class="name"><div>Formation</div></div><!--
+         --><div class="big" > <!-- big container -->
 
             </div>
          </section><!--
-      --><section>
-            <div class="name" onclick="alert('Experience');"><div>Experience</div></div><!--
-         --><div id="activated"> <!-- big container -->
+      --><section id="exp" onclick="switchContainer('exp');">
+            <div class="name"><div>Experience</div></div><!--
+         --><div class="big" id="activated"> <!-- big container -->
               text
             </div>
           </section>

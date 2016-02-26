@@ -16,10 +16,10 @@ header nav{
    position:relative;
 }
 
-.dia{background: #D6700C;}
-.cor{background: #0B6D84;}
-.lea{background: #D6230C;}
-.enz{background: #09A031;}
+.dia{background: #f8b36d;} a.dia:hover{background: #f8b36d;}
+.cor{background: #72dbf3;} a.cor:hover{background: #72dbf3;}
+.lea{background: #f77e6e;} a.lea:hover{background: #f77e6e;}
+.enz{background: #5CE786;} a.enz:hover{background: #5CE786;}
 
 header nav ul li{
    width:100%;
@@ -51,10 +51,11 @@ section{display: inline-block; position: relative;}
 
 #container section div:nth-child(2n){
    display : none;
-   background-color: #F1F;
+   /*background-color: #FFF;*/
    height: 85vh;
    vertical-align: top;
-   width: 80vw;
+   width: 0vw;
+   transition: width 2s;
 }
 
 .name{
@@ -65,7 +66,7 @@ section{display: inline-block; position: relative;}
 
 #container section .name div{
   width: 85vh;
-  transform: rotate(-90deg) translate(0, 11.5vh);
+  transform: rotate(-90deg) translate(0px, 4.5vw);;
   display: block;
   position: relative;
   top: 73.5vh;
@@ -77,4 +78,31 @@ section{display: inline-block; position: relative;}
 
 #activated{
    display: inline-block !important;
+   width: 80vw !important;
+
+   transition: width 2s;
 }
+
+
+
+/*///////////////////////////////////////////////////////////////////////////////////*/
+
+.cor #int{ background-color:#e7f9fd ;} .cor #int .name:hover{ background-color:#c1f0fa ;}
+.cor #com{ background-color:#d0f3fb ;} .cor #com .name:hover{ background-color:#aae9f8 ;}
+.cor #for{ background-color:#b9edf9 ;} .cor #for .name:hover{ background-color:#93e3f6 ;}
+.cor #exp{ background-color:#a1e7f7 ;} .cor #exp .name:hover{ background-color:#7bddf4 ;}
+
+.dia #int{ background-color:#fef2e7 ;} .dia #int .name:hover{ background-color:#fcddc0 ;}
+.dia #com{ background-color:#fcd8b6 ;} .dia #com .name:hover{ background-color:#fac38f ;}
+.dia #for{ background-color:#fbca9d ;} .dia #for .name:hover{ background-color:#f9b576 ;}
+.dia #exp{ background-color:#fabd85 ;} .dia #exp .name:hover{ background-color:#f8a85e ;}
+
+.lea #int{ background-color:#feeae7 ;} .lea #int .name:hover{ background-color:#fcc8c0 ;}
+.lea #com{ background-color:#fdd4ce ;} .lea #com .name:hover{ background-color:#fbb2a7 ;}
+.lea #for{ background-color:#fcbfb6 ;} .lea #for .name:hover{ background-color:#fa9d8f ;}
+.lea #exp{ background-color:#fbaa9d ;} .lea #exp .name:hover{ background-color:#f98876 ;}
+
+.enz #int{ background-color:#e9fcee ;} .enz #int .name:hover{ background-color:#c5f7d2 ;}
+.enz #com{ background-color:#d2f9dc ;} .enz #com .name:hover{ background-color:#aef4c0 ;}
+.enz #for{ background-color:#bcf6cb ;} .enz #for .name:hover{ background-color:#98f1af ;}
+.enz #exp{ background-color:#a5f3ba ;} .enz #exp .name:hover{ background-color:#81ee9e ;}
