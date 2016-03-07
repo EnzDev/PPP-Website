@@ -106,3 +106,15 @@ section{display: inline-block; position: relative;}
 .enz #com{ background-color:#d2f9dc ;} .enz #com .name:hover{ background-color:#aef4c0 ;}
 .enz #for{ background-color:#bcf6cb ;} .enz #for .name:hover{ background-color:#98f1af ;}
 .enz #exp{ background-color:#a5f3ba ;} .enz #exp .name:hover{ background-color:#81ee9e ;}
+
+/*////// BIG containers
+
+/* int  exp for
+*/
+#int .big ul li h3:hover +p,#exp .big ul li h3:hover +p,#for .big ul li h3:hover +p{
+  display: block;
+}
+
+#int .big ul li p,#exp .big ul li p,#for .big ul li p{
+  display: none;
+}
