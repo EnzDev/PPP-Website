@@ -5,16 +5,15 @@
       <title>Nom - Prenom</title>
       <link rel="stylesheet" href="src/css/reset.css" charset="utf-8">
       <link rel="stylesheet" href="src/css/main.css"  charset="utf-8">
-      <script src="src/jquery.js" charset="utf-8"></script>
-      <script src="src/main.js" charset="utf-8"></script>
+      <script src="main.js" charset="utf-8"></script>
    </head>
    <body>
       <header>
          <nav>
             <ul>
-               <li><a href="#" class="dia">Diane Robert</a></li>
-               <li><a href="#" class="enz">Enzo Mallard</a></li>
-               <li><a href="#" class="lea">Lea Le Bert</a></li>
+               <li><a href="#" class="dia">Pers1</a></li>
+               <li><a href="#" class="enz">Pers2</a></li>
+               <li><a href="#" class="lea">Pers3</a></li>
             </ul>
          </nav><!-- no space
       --><div> <!-- resume -->
@@ -26,28 +25,28 @@
          </div>
       </header>
 
-      <div id="container" class="cor">
-        <section id="int">
-            <div class="name"><div>Centres d'interets</div></div><!--
-         --><div class="big" > <!-- big container -->
+      <div id="container">
+        <section id="int" onclick="switchCell('int')">
+         <div class="name"><div>Centres d'interets</div></div><!--
+         --><div> <!-- big container -->
 
            </div>
          </section><!--
-      --><section id="com">
-            <div class="name"><div>Competence</div></div><!--
-         --><div class="big" > <!-- big container -->
+      --><section id="com" onclick="switchCell('com');">
+            <div class="name" onclick="alert('Competence');"><div>Competence</div></div><!--
+         --><div> <!-- big container -->
 
             </div>
         </section><!--
-      --><section id="for">
+      --><section id="for" onclick="switchCell('for');">
             <div class="name"><div>Formation</div></div><!--
-         --><div class="big" > <!-- big container -->
+         --><div> <!-- big container -->
 
             </div>
          </section><!--
-      --><section id="exp">
+      --><section id="exp" onclick="switchCell('exp');">
             <div class="name"><div>Experience</div></div><!--
-         --><div class="big"> <!-- big container -->
+         --><div id="activated"> <!-- big container -->
               text
             </div>
           </section>

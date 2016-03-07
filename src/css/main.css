@@ -49,14 +49,6 @@ section{display: inline-block; position: relative;}
 
 #container section div{display: inline-block;}
 
-#container section div:nth-child(2n){
-   display : none;
-   /*background-color: #FFF;*/
-   height: 85vh;
-   vertical-align: top;
-   width: 0vw;
-   transition: width 2s;
-}
 
 .name{
   height: 85vh;
@@ -76,13 +68,21 @@ section{display: inline-block; position: relative;}
   line-height: 5vw;
 }
 
-#activated{
+.activated .big{
    display: inline-block !important;
    width: 80vw !important;
 
    transition: width 2s;
 }
 
+#container section div.big{
+   display : none;
+   /*background-color: #FFF;*/
+   height: 85vh;
+   vertical-align: top;
+   width: 0vw;
+   transition: width 2s !important;
+}
 
 
 /*///////////////////////////////////////////////////////////////////////////////////*/
