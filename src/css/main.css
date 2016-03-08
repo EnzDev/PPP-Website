@@ -39,6 +39,10 @@ header div{
    display:inline-block;
 }
 
+header div div p{
+  display: inline-block;
+}
+
 
 #container {
    height : 85vh;
@@ -118,7 +122,16 @@ section{display: inline-block; position: relative;}
 #int .container ul li h3:hover +p,#exp .container ul li h3:hover +p,#for .container ul li h3:hover +p{
   display: block;
 }
+#int .container ul li h3:hover +svg,#exp .container ul li h3:hover +svg,#for .container ul li h3:hover +svg{
+  transform: rotate(7deg);
+}
+
 
 #int .container ul li p,#exp .container ul li p,#for .container ul li p{
   display: none;
+}
+
+
+#int .container ul li ,#exp .container ul li ,#for .container ul li{
+
 }
