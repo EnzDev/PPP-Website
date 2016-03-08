@@ -68,22 +68,26 @@ section{display: inline-block; position: relative;}
   line-height: 5vw;
 }
 
-.activated .big{
-   display: inline-block !important;
-   width: 80vw !important;
-
-   transition: width 2s;
-}
-
-#container section div.big{
+.big{
    display : none;
    /*background-color: #FFF;*/
    height: 85vh;
    vertical-align: top;
    width: 0vw;
-   transition: width 2s !important;
+   transition: width cubic-bezier(0.01,0.5,0.25,1) 1s;
+   overflow: hidden;
 }
 
+.container {
+   width: 80vw;
+}
+
+.activated .big{
+   display: inline-block !important;
+   width: 80vw !important;
+
+   transition: width cubic-bezier(0.01,0.5,0.25,1) 1s;
+}
 
 /*///////////////////////////////////////////////////////////////////////////////////*/
 
@@ -111,10 +115,10 @@ section{display: inline-block; position: relative;}
 
 /* int  exp for
 */
-#int .big ul li h3:hover +p,#exp .big ul li h3:hover +p,#for .big ul li h3:hover +p{
+#int .container ul li h3:hover +p,#exp .container ul li h3:hover +p,#for .container ul li h3:hover +p{
   display: block;
 }
 
-#int .big ul li p,#exp .big ul li p,#for .big ul li p{
+#int .container ul li p,#exp .container ul li p,#for .container ul li p{
   display: none;
 }
