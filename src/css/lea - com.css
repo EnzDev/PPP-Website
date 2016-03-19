@@ -1,0 +1,53 @@
+h4 {
+    font-size: 21px;
+    color: #D4414B;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.Comp-cont {
+  margin-top: 20px;
+  padding: 5px 0 20px 20px;
+  overflow: auto;
+  font-family: sans-serif;
+}
+.Comp-cont .Comp-lvl {
+    width: 30vw;
+    color: #fff;
+    padding: 3px 3px;
+    background-color: #e07a81;
+    margin: 3px 10px;
+}
+.Comp-cont .Comp-lvl .Comp {
+    background-color: #D4414B;
+    height: 10px;
+}
+.Comp-cont .Comp-lvl .deux {
+    width: 20%;
+}
+.Comp-cont .Comp-lvl .cinq {
+    width: 50%;
+}
+.Comp-cont .Comp-lvl .six {
+    width: 60%;
+}
+.Comp-cont .Comp-lvl .sept {
+    width: 70%;
+}
+.Comp-cont .Comp-lvl .huit {
+    width: 80%;
+}
+.Comp-cont .Comp-lvl .neuf {
+    width: 90%;
+}
+.Comp-nom{
+    font-family: sans-serif;
+    float: left;
+    width: 160px;
+    font-weight: bold;
+
+}
+
+hr{
+  color: #D4414B;
+  width: 60vw;
+}
