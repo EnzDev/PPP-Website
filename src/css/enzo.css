@@ -1,15 +1,92 @@
 body{
     font-family: Amaranth, sans-serif;
+    display: flex;
+    flex-direction: row;
+
+    background-color: rgb(242, 242, 210);
+
+    /* Cuz I hate selection */
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* IE/Edge */
+    user-select: none;           /* non-prefixed version, currently
+                                  not supported by any browser */
 }
 
-header.default{
-    height: 81vh;
-    display: block;
+/* HEADER */
+header {
+    display: inline-flex;
+    height: 100vh;
+    width: 15vw;
+    background-color: #FFFFF1;
+    left: -15vw;
+    position: relative;
+    transition: left 1s ease;
+}
+
+header.pulled{
+    left:0;
+}
+
+header img{
+    border-radius: 0 0 50% 0;
+    width: 80%;
+}
+
+header > ul{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+header > ul > li{
+    display: flex;
+    flex-direction: column;
+}
+
+header > ul > li:not(:first-child){text-align: right;}
+
+header a.id{
+    font-size: calc((3.2vh + 3.2vw) / 2);
+    text-align: left;
+}
+
+header li:nth-child(2){margin-bottom: 5vh;}
+
+.nav{
+    font-size: calc((2.1vh + 2.1vw) / 2);
+    margin-bottom: 7.5vh;
+    transform: rotate(7.5deg);
+}
+
+/* CONTAINER */
+.container {
+    display: flex;
+    height: 100vh;
+    width: 85vw;
+
+    position: absolute;
+    flex-direction: column;
+}
+
+.container > section{
+    width: 85vw;
+    display: flex;
+}
+
+.container > .active{
+    height: 100vh;
 }
 
 
-nav.default{
-    display: block;
-    height: 19vh;
+/* FOOTER */
+footer{
+    position: fixed;
+    bottom: 0;
+    right:0;
+    width: 100vw;
+    text-align: right;
 }
-

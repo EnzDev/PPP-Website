@@ -6,29 +6,39 @@
     <link href="src/css/reset.css" rel="stylesheet" media="screen" charset="utf-8">
     <link rel="stylesheet" href="src/css/font/fontface.css" media="screen" charset="utf-8">
     <link href="src/css/enzo.css" rel="stylesheet" media="screen" charset="utf-8">
+    <script src="src/jquery.js" charset="utf-8"></script>
+    <script>
+        $(document).ready(function() {
+            $("section section").hide();
+            $('#formation').show();
+            $("header").animate({"left": 0});
+        });
+    </script>
 </head>
 <body>
-    <header class="default">
-        <span class="sizer"></span>
-        <span>
-            <div>Enzo<img src="src/img/enzo.jpg">Mallard</div>
-            <div>Informaticien en devenir</div>
-            <div>06.28.45.75.5? &ndash; <a href="mailto:enzo@mallard.ml">enzo@mallard.ml</a></div>
-        </span>
-    </header>
-    <nav>
-        <span>Ma formation</span>
-        <span>Mes compétences</span>
-        <span>Mon expériences</span>
-        <span>Mes centres d'intérets</span>
-    </nav>
-    <section></section>
-    <section></section>
-    <section></section>
-    <section></section>
+    <header>
+        <ul>
+            <li><img class="id"  src="src/img/enzo.jpg"></li>
+            <li><a   class="id"  href="#top">Enzo Mallard</a></li>
+
+            <li><a   class="nav" href="#formation"     >Ma formation</a></li>
+            <li><a   class="nav" href="#competences"   >Mes compétences</a></li>
+            <li><a   class="nav" href="#experiences"   >Mon expériences</a></li>
+            <li><a   class="nav" href="#centresInteret">Mes centres d'intérets</a></li>
+        </ul>
+    </header><!--
+
+    --><section class="container">
+        <section id="top" class="active">content</section>
+        <section id="formation">content</section>
+        <section id="competences">content</section>
+        <section id="experiences">content</section>
+        <section id="centresInteret">content</section>
+    </section>
+
     <footer>
-        <span class="left">Tout droits réservés, genre pas touche hein !</span><span class="right">Université de Nantes &ndash; IUT-INFO</span>
-        <br><a href="index.html">Retour à l'accueuil</a>
+        <span class="left">Tout droits réservés, genre pas touche hein !</span>
+        <a href="index.html">Retour à l'accueuil</a>
     </footer>
 </body>
 </html>
