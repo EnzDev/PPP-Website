@@ -126,11 +126,11 @@ div.socials {
 
 .socials a{
     display: inline-block;
-    width: calc((85vw / 12) - 2vw);
-    height: calc((85vw / 12) - 2vw);
+    width: calc(61vw / 12);
+    height: calc(61vw / 12);
     background-size: 400% 300%;
     margin: 0 1vw;
-    background-image: url("../img/socialDisa.png");
+    background-image: url('../img/socialDisa.png');
 }
 
 .socials a:hover{

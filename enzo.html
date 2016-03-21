@@ -48,7 +48,20 @@
                 $($(this).attr('href')).fadeIn();
             });
 
+            setInterval(function() {
+                var qual = ["curieux", "creatif", "patient", "un peu trop perfectionniste", "matheux", "libriste (pas libraire)", "lol"];
+                var att = $("#attri");
+                do{
+                    var rand = qual[Math.floor(Math.random() * qual.length)];
+                }while(att.text()==rand+".");
+                att.fadeOut(function(){att.text(rand+".")}).fadeIn();
+                return rand;
+            },2000);
+
+
+
         });
+
     </script>
 </head>
 <body>
@@ -72,9 +85,10 @@
             <div>
                 <h2  class="resume">Le Me</h2>
                 <div class="resume content">
-                    <span id="day"></span>, je suis Enzo Mallard. <br>
-                    Un petit étudiant en IUT d'informatique qui aime les technos en tout genre.
+                    <span id="day"></span>, je suis Enzo Mallard, un petit étudiant en IUT d'informatique qui aime les technos en tout genre. <br><br>
                 </div>
+
+                <h2>Je suis <span id="attri">curieux</span></h2>
 
                 <h2 class="socials">Retrouvez-moi un peu partout</h2>
                 <div class="socials">
