@@ -11,8 +11,7 @@ body{
     -khtml-user-select: none;    /* Konqueror */
     -moz-user-select: none;      /* Firefox */
     -ms-user-select: none;       /* IE/Edge */
-    user-select: none;           /* non-prefixed version, currently
-                                  not supported by any browser */
+    user-select: none;           /* non-prefixed version, currently not supported by any browser */
 }
 
 /* HEADER */
@@ -24,6 +23,7 @@ header {
     left: -15vw;
     position: relative;
     transition: left 1s ease;
+    box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.5);
 }
 
 header.pulled{
@@ -59,10 +59,38 @@ header li:nth-child(2){margin-bottom: 5vh;}
 .nav{
     font-size: calc((2.1vh + 2.1vw) / 2);
     margin-bottom: 7.5vh;
-    transform: rotate(7.5deg);
+    transform: rotate(7.5deg)translate(-0.15vh,0);
+    color: #000;
+}
+
+.nav.active{
+    pointer-events: none;
+}
+
+.id.active{
+    pointer-events: none;
+}
+
+header li:last-child{
+    position: absolute;
+    bottom: 0.5vh;
+    left: 0.5vh;
+}
+
+.hme{
+    background-image: url("../img/home.png");
+    background-size: 100% 100%;
+    width: 7.5vh;
+    height: 7.5vh;
+    text-indent: -500vw;
+
 }
 
 /* CONTAINER */
+h2{
+    margin-left: 2vw;
+}
+
 .container {
     display: flex;
     height: 100vh;
@@ -82,6 +110,32 @@ header li:nth-child(2){margin-bottom: 5vh;}
 }
 
 
+/* LE-ME */
+h2.socials{
+    position: absolute;
+    bottom: calc(85vw / 12 - 1vw);
+}
+
+div.socials {
+    position: absolute;
+    bottom: 1vh;
+}
+
+.socials a{
+    display: inline-block;
+    width: calc((85vw / 12) - 2vw);
+    height: calc((85vw / 12) - 2vw);
+    text-indent: -500vw;
+    background-size: 400% 300%;
+    margin: 0 1vw;
+    background-image: url("../img/socialDisa.png");
+}
+
+.socials a:hover{
+    background-image: url("../img/socialEna.png");
+}
+
+
 /* FOOTER */
 footer{
     position: fixed;
@@ -89,4 +143,5 @@ footer{
     right:0;
     width: 100vw;
     text-align: right;
+    z-index: -10;
 }

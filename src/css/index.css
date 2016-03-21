@@ -2,6 +2,14 @@ body{
     background: #0f0f0f;
     background-image: url("../img/background.png");
     background-size: 100vw 100vh;
+
+    /* Cuz I hate selection */
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* IE/Edge */
+    user-select: none;           /* non-prefixed version, currently not supported by any browser */
 }
 
 ul{
@@ -23,9 +31,11 @@ ul li img, ul li span{
     margin: auto;
     font: 700 4vh Amaranth, sans-serif;
     color: rgba(255, 255, 255, 0.9);
+    transition: font-size 100ms;
 }
 
-ul li img{
+
+ul li img, ul li:active img{
     height: calc( 5vh + 4vw );
     width: calc( 5vh + 4vw );
     border-radius: 50%;
@@ -37,9 +47,18 @@ ul li:hover img{
     width: calc( 5vh + 5vw );
 }
 
+ul li:active img{
+    height: calc( 5vh + 4vw );
+    width: calc( 5vh + 4vw );
+    border-radius: 50%;
+}
+
 ul li:hover span{
-    transition: font-size 100ms;
     font-size: 4.2vh;}
+
+ul li:active span{
+    font-size: 4vh;
+}
 
 ul li:first-child span{color: rgba(16, 16, 16, 0.9);}
 

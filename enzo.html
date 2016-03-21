@@ -6,12 +6,48 @@
     <link href="src/css/reset.css" rel="stylesheet" media="screen" charset="utf-8">
     <link rel="stylesheet" href="src/css/font/fontface.css" media="screen" charset="utf-8">
     <link href="src/css/enzo.css" rel="stylesheet" media="screen" charset="utf-8">
+    <link rel="prefetch" href="/src/img/socialDisa.png">
+    <link rel="prefetch" href="/src/img/socialEna.png">
     <script src="src/jquery.js" charset="utf-8"></script>
+    <script
+            src="http://code.jquery.com/color/jquery.color-2.1.2.min.js"
+            integrity="sha256-H28SdxWrZ387Ldn0qogCzFiUDDxfPiNIyJX7BECQkDE="
+            crossorigin="anonymous"></script>
     <script>
         $(document).ready(function() {
-            $("section section").hide();
-            $('#formation').show();
+            if ((1 + Math.floor(Math.random() * 10))==3){ // Fun 1 time over 10
+                $("img.id").css({"border-radius": "50% 50% 12.5%"});
+                $(".nav").css({"transform" : "translate(-0.15vh, 0px)"});
+            }
+
             $("header").animate({"left": 0});
+            $("section section").hide();
+            $('#top').show();
+
+            if ((new Date().getHours())<8 ||(new Date().getHours())>22 ){ // Set the text depending of the local time YAY !
+                //Bonsoir
+                $("#day").text("Bonsoir");
+            }else{
+                //Bonjour
+                $("#day").text("Bonjour");
+            }
+
+            $('a.id').addClass("active").click(function(){ // clicked on the top
+                $(".nav").removeClass("active").animate({ color: "#000" }, 100);
+                $(this).addClass("active");
+                $("section section").hide();
+                $("#top").fadeIn()
+            });
+
+            $(".nav").click(function(){ // clicked on a nav button
+                $(".nav").removeClass("active").animate({ color: "#000" }, 100);
+                $(".id").removeClass("active");
+                $(this).addClass("active");
+                $("section section").hide();
+                $(this).animate({ color: "#5EC3B8" }, 100);
+                $($(this).attr('href')).fadeIn();
+            });
+
         });
     </script>
 </head>
@@ -25,20 +61,46 @@
             <li><a   class="nav" href="#competences"   >Mes compétences</a></li>
             <li><a   class="nav" href="#experiences"   >Mon expériences</a></li>
             <li><a   class="nav" href="#centresInteret">Mes centres d'intérets</a></li>
+            <li><a   class="nav" href="#contact">Me contacter</a></li>
+
+            <li><a   class="hme" href="index.html"></a></li>
         </ul>
     </header><!--
 
     --><section class="container">
-        <section id="top" class="active">content</section>
-        <section id="formation">content</section>
-        <section id="competences">content</section>
-        <section id="experiences">content</section>
-        <section id="centresInteret">content</section>
+        <section id="top" class="active">
+            <div>
+                <h2  class="resume">Le Me</h2>
+                <div class="resume">
+                    <span id="day"></span>
+                </div>
+
+                <h2 class="socials">Retrouvez-moi un peu partout</h2>
+                <div class="socials">
+                    <a style="background-position: 0 0" id="Twitter" href="http://twitter.com/Maitre_Git">T</a><!--
+                 --><a style="background-position: calc(100% / 3) 0" id="Facebook" href="http://twitter.com/Maitre_Git">F</a><!--
+                 --><a style="background-position: calc(200% / 3) 0" id="Steam" href="http://steamcommunity.com/id/xoman_zheo/">S</a><!--
+                 --><a style="background-position: 100% 0" id="Google" href="http://google.com/minus">+</a><!--
+                 --><a style="background-position: 0 50%" id="LinkedIn" href="https://www.linkedin.com/in/EnzDev">L</a><!--
+                 --><a style="background-position: calc(100% / 3) 50%" id="Skype" href="skype:live:enzo_926?chat">S</a><!--
+                 --><a style="background-position: calc(200% / 3) 50%" id="MyWebsite" href="http://enzomallard.fr">M</a><!--
+                 --><a style="background-position: 100% 50%" id="Email" href="mailto:enzo@mallard.ml">E</a><!--
+                 --><a style="background-position: 0 100%" id="Phone" href="tel:+33628457558">P</a><!--
+                 --><a style="background-position: 100% 100%" id="GitHub" href="http://github.com/EnzDev">G</a><!--
+                 --><a style="background-position: calc(100% / 3) 100%" id="StackOverflow" href="http://stackoverflow.com/users/5592332/e-mallard?tab=profile">O</a><!--
+                 --><a style="background-position: calc(200% / 3) 100%" id="Reddit" href="https://www.reddit.com/user/maitre_git/">R</a>
+                </div>
+            </div>
+        </section>
+        <section id="formation">B content</section>
+        <section id="competences">C content</section>
+        <section id="experiences">D content</section>
+        <section id="centresInteret">E content</section>
+        <section id="contact">F content</section>
     </section>
 
     <footer>
         <span class="left">Tout droits réservés, genre pas touche hein !</span>
-        <a href="index.html">Retour à l'accueuil</a>
     </footer>
 </body>
 </html>
