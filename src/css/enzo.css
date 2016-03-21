@@ -3,7 +3,7 @@ body{
     display: flex;
     flex-direction: row;
 
-    background-color: rgb(242, 242, 210);
+    background-color: rgba(242, 242, 210, 0.51);
 
     /* Cuz I hate selection */
     -webkit-touch-callout: none; /* iOS Safari */
@@ -55,7 +55,7 @@ header li:nth-child(2){margin-bottom: 5vh;}
 .nav{
     font-size: calc((2.1vh + 2.1vw) / 2);
     margin-bottom: 7.5vh;
-    transform: rotate(7.5deg)translate(-0.15vh,0);
+    transform: rotate(7.5deg)translate(-1vh,0);
     color: #000;
 }
 
@@ -84,9 +84,8 @@ header li:last-child{
 
 /* CONTAINER */
 h2{
-    margin-left: 2vw;
+    margin-left: 3vw;
     font-size: calc((2.1vh + 2.1vw) / 2);
-    font-weight: bold;
 }
 
 .container {
@@ -111,12 +110,18 @@ h2{
 /* LE-ME */
 h2.socials{
     position: absolute;
-    bottom: calc(85vw / 12 - 1vw);
+    bottom: calc(85vw / 12);
 }
 
 div.socials {
     position: absolute;
     bottom: 1vh;
+}
+
+.content{
+    margin-left: 1vw;
+    font-family: theano-didot,serif;
+    font-size: calc( (1.5vh + 1.5vw) / 2);
 }
 
 .socials a{
@@ -135,6 +140,7 @@ div.socials {
 
 /* FOOTER */
 footer{
+    display: none;
     position: fixed;
     bottom: 0;
     right:0;
