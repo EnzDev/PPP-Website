@@ -123,7 +123,6 @@ div.socials {
     display: inline-block;
     width: calc((85vw / 12) - 2vw);
     height: calc((85vw / 12) - 2vw);
-    text-indent: -500vw;
     background-size: 400% 300%;
     margin: 0 1vw;
     background-image: url("../img/socialDisa.png");
