@@ -1,6 +1,5 @@
 body{
-    background: #0f0f0f;
-    background-image: url("../img/background.png");
+    background: #0f0f0f url("../img/background.png");
     background-size: 100vw 100vh;
 
     /* Cuz I hate selection */

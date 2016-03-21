@@ -23,11 +23,7 @@ header {
     left: -15vw;
     position: relative;
     transition: left 1s ease;
-    box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.5);
-}
-
-header.pulled{
-    left:0;
+    box-shadow: 1px 0 5px rgba(0, 0, 0, 0.5);
 }
 
 header img{
