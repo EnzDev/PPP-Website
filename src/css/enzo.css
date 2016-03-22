@@ -50,12 +50,13 @@ header a.id{
     text-align: left;
 }
 
-header li:nth-child(2){margin-bottom: 5vh;}
+header li:nth-child(2){margin-bottom: 8vh;}
 
 .nav{
     font-size: calc((2.1vh + 2.1vw) / 2);
     margin-bottom: 7.5vh;
-    transform: rotate(7.5deg)translate(-1vh,0);
+    margin-left: 0.5vw;
+    transform: rotate(15deg)translate(-1vh,0);
     color: #000;
 }
 
