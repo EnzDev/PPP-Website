@@ -1,4 +1,11 @@
-body{font-family: Amaranth, sans-serif;}
+body{font-family: Amaranth, sans-serif;
+  /* because i am a thief*/
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* IE/Edge */
+  user-select: none;           /* non-prefixed version, currently not supported by any browser */}
 
 header{
   background: #d9d9d9;
@@ -6,6 +13,7 @@ header{
   height: 15%;
   padding-top: 1vh;
   padding-bottom: 1vh;
+
   }
   header table{
     display: inline-block;
@@ -144,33 +152,42 @@ section{display: inline-block; position: relative;}
   pointer-events: none;
 }
 
-#int{ background-color:#DA8343 ;} #int .name:hover{ background-color:#d6752e;}
-#com{ background-color:#ed9fa4 ;} #com .name:hover{ background-color:#EA7079;}
+#int{ background-color:#FFCFA8 ;} #int .name:hover{ background-color:#CF8D56;}
+#com{ background-color:#ffa8a8 ;} #com .name:hover{ background-color:#e37a7a;}
 #for{ background-color:#a4ed9f;}  #for .name:hover{ background-color:#93d58f ;}
 #exp{ background-color:#5EC3B8;}  #exp .name:hover{ background-color:#41ada2 ;}
 
-#int h4{ color: #99521e;font-size: 18px; }
-#com h4{ color: #D4414B;font-size: 18px; }
-#for h4{ color: #245821;font-size: 18px; }
-#exp h4{ color: #215953;font-size: 18px; }
+#int .date{ color: #99521e;font-size: 16px; font-family: Amaranth, sans-serif;margin-bottom: 0px;}
+#com .date{ color: #D4414B;font-size: 16px; font-family: Amaranth, sans-serif;margin-bottom: 0px;}
+#for .date{ color: #245821;font-size: 16px; font-family: Amaranth, sans-serif;margin-bottom: 0px;}
+#exp .date{ color: #215953;font-size: 16px; font-family: Amaranth, sans-serif;margin-bottom: 0px;}
 
-#int h3{line-height: 1vh;
-font-size: 21px;
+#int table{line-height: 5vh;
+font-size: 16px;
 margin-bottom: 5px;
-margin-top: 5px;
-color:#222;}
-#com h3{line-height: 1vh;
-font-size: 21px;
+margin-top: 10px;
+color:#222;
+font-family: 'Open Sans', sans-serif;
+display: inline-block;}
+#for table{line-height: 5vh;
+font-size: 16px;
 margin-bottom: 5px;
-margin-top: 5px;
-color:#222;}
-#for h3{line-height: 1vh;
-font-size: 21px;
+margin-top: 10px;
+color:#222;
+font-family: 'Open Sans', sans-serif;
+display: inline-block;}
+#exp table{line-height: 5vh;
+font-size: 16px;
 margin-bottom: 5px;
-margin-top: 5px;
-color:#222;}
-#exp h3{line-height: 1vh;
-font-size: 21px;
-margin-bottom: 5px;
-margin-top: 5px;
-color:#222;}
+margin-top: 10px;
+color:#222;
+font-family: 'Open Sans', sans-serif;
+display: inline-block;}
+
+#exp table tr:nth-child(odd){
+  background-color: #41ada2;
+}
+
+table tr td{ vertical-align: middle;}
+
+.date{width: 7vw; text-align: center; height: 8vh;line-height: 1.5em;}

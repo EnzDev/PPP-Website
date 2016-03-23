@@ -4,11 +4,12 @@ h4 {
     margin-bottom: 5px;
     margin-top: 5px;
 }
+
 .Comp-cont {
   margin-top: 20px;
   padding: 5px 0 20px 20px;
   overflow: auto;
-  font-family: sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 .Comp-cont .Comp-lvl {
     width: 30vw;
@@ -19,7 +20,7 @@ h4 {
 }
 .Comp-cont .Comp-lvl .Comp {
     background-color: #D4414B;
-    height: 10px;
+    height: 12px;
 }
 .Comp-cont .Comp-lvl .deux {
     width: 20%;
