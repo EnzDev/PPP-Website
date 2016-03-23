@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Enzo Mallard</title>
+    <link href="src/css/reset.css" rel="stylesheet" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="src/css/font/fontface.css" media="screen" charset="utf-8">
+    <link href="src/css/enzo.css" rel="stylesheet" media="screen" charset="utf-8">
+    <link rel="prefetch" href="/src/img/socialDisa.png">
+    <link rel="prefetch" href="/src/img/socialEna.png">
+    <script src="src/jquery.js" charset="utf-8"></script>
+    <script
+            src="http://code.jquery.com/color/jquery.color-2.1.2.min.js"
+            integrity="sha256-H28SdxWrZ387Ldn0qogCzFiUDDxfPiNIyJX7BECQkDE="
+            crossorigin="anonymous"></script>
+    <script>
+
+        function shuffleArray(array) {
+            for (var i = array.length - 1; i > 0; i--) {
+                var j = Math.floor(Math.random() * (i + 1));
+                var temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+            }
+            return array;
+        }
+
+        $(document).ready(function() {
+            if ((1 + Math.floor(Math.random() * 10))==3){ // Fun 1 time over 10
+                $("img.id").css({"border-radius": "50% 50% 50% 12.5%", "padding-left": "1.5vw"});
+                $(".nav").css({"transform" : "translate(-1vh, 0px)"});
+            }
+
+            $("header").animate({"left": 0});
+            $("section section").hide();
+            $('#top').show();
+
+            if ((new Date().getHours())<8 ||(new Date().getHours())>=20 ){ // Set the text depending of the local time YAY !
+                //Bonsoir
+                $("#day").text("Bonsoir");
+            }else{
+                //Bonjour
+                $("#day").text("Bonjour");
+            }
+            var qual = shuffleArray(["curieux", "creatif", "patient", "un peu trop perfectionniste", "matheux", "libriste (pas libraire)", "rigoureux", "passionné"]);
+            $("#attri").text(qual[0]+".");
+
+            $('a.id').addClass("active").click(function(){ // clicked on the top
+                $(".nav").removeClass("active").animate({ color: "#000" }, 100);
+                $(this).addClass("active");
+                $("section section").hide();
+                $("#top").fadeIn()
+            });
+
+            $(".nav").click(function(){ // clicked on a nav button
+                $(".nav").removeClass("active").animate({ color: "#000" }, 100);
+                $(".id").removeClass("active");
+                $(this).addClass("active");
+                $("section section").hide();
+                $(this).animate({ color: "#5EC3B8" }, 100);
+                $($(this).attr('href')).fadeIn();
+            });
+
+            setInterval(function() {
+                var att = $("#attri");
+                var text = qual[qual.indexOf(att.text().replace(".",""))+1]!=undefined ? qual[qual.indexOf(att.text().replace(".",""))+1] : qual[0];
+                att.fadeOut(function(){att.text(text+".")}).fadeIn();
+            },8000);
+
+
+
+        });
+
+
+    </script>
+</head>
+<body>
+    <header>
+        <ul>
+            <li><img class="id"  src="src/img/enzo.jpg"></li>
+            <li><a   class="id"  href="#top">Enzo Mallard</a></li>
+
+            <li><a   class="nav" href="#formation"     >Ma formation</a></li>
+            <li><a   class="nav" href="#competences"   >Mes compétences</a></li>
+            <li><a   class="nav" href="#experiences"   >Mon expériences</a></li>
+            <li><a   class="nav" href="#centresInteret">Mes centres d'intérets</a></li>
+            <li><a   class="nav" href="#contact">Me contacter</a></li>
+
+            <li><a   class="hme" href="index.html"></a></li>
+        </ul>
+    </header><!--
+
+    --><section class="container">
+        <section id="top" class="active">
+            <div class="resume">
+                <h2>Le Me</h2>
+                <div class="content">
+                    <span id="day"></span>, je suis Enzo Mallard, un petit étudiant en IUT d'informatique qui aime les technos en tout genre.
+                </div>
+
+                <h2>Je suis <span id="attri">curieux</span></h2>
+                <div class="content">
+
+
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas commodo laoreet varius. Suspendisse porta ex in felis hendrerit, eget dictum orci accumsan. Etiam et enim et diam iaculis varius. Morbi commodo ligula in dui blandit convallis. Donec lorem diam, porta quis ipsum id, mattis faucibus libero. Proin rutrum feugiat magna, quis accumsan nisi tincidunt sed. Etiam ultricies, massa in consectetur malesuada, urna odio fermentum enim, ac sagittis neque lorem id justo. Quisque porttitor convallis ornare. Proin facilisis finibus aliquet.<br>
+                    Aenean sagittis lorem in auctor hendrerit. Aliquam bibendum lacus nec magna dapibus, vitae malesuada neque egestas. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent pellentesque maximus velit, at dictum ligula pretium egestas. Morbi facilisis nulla quis eros viverra vehicula. Vestibulum at venenatis velit. Duis congue imperdiet interdum.
+                </div>
+            </div>
+            <h2 class="socials">Retrouvez-moi un peu partout</h2>
+            <div class="socials">
+                <a style="background-position: 0 0" id="Twitter" href="http://twitter.com/Maitre_Git"></a><!--
+                 --><a style="background-position: calc(100% / 3) 0" id="Facebook" href="http://twitter.com/Maitre_Git"></a><!--
+                 --><a style="background-position: calc(200% / 3) 0" id="Steam" href="http://steamcommunity.com/id/xoman_zheo/"></a><!--
+                 --><a style="background-position: 100% 0" id="Google" href="http://google.com/minus"></a><!--
+                 --><a style="background-position: 0 50%" id="LinkedIn" href="https://www.linkedin.com/in/EnzDev"></a><!--
+                 --><a style="background-position: calc(100% / 3) 50%" id="Skype" href="skype:live:enzo_926?chat"></a><!--
+                 --><a style="background-position: calc(200% / 3) 50%" id="MyWebsite" href="http://enzomallard.fr"></a><!--
+                 --><a style="background-position: 100% 50%" id="Email" href="mailto:enzo@mallard.ml"></a><!--
+                 --><a style="background-position: 0 100%" id="Phone" href="tel:+33628457558"></a><!--
+                 --><a style="background-position: 100% 100%" id="GitHub" href="http://github.com/EnzDev"></a><!--
+                 --><a style="background-position: calc(100% / 3) 100%" id="StackOverflow" href="http://stackoverflow.com/users/5592332/e-mallard?tab=profile"></a><!--
+                 --><a style="background-position: calc(200% / 3) 100%" id="Reddit" href="https://www.reddit.com/user/maitre_git/"></a>
+            </div>
+        </section>
+        <section id="formation">
+            <div class="container">
+                <div>
+                    <h2>2015 &mdash; Bacalauréat Scientifique - SI</h2>
+                    <div class="content">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="competences">C content</section>
+        <section id="experiences">D content</section>
+        <section id="centresInteret">E content</section>
+        <section id="contact">F content</section>
+    </section>
+
+    <footer>
+        <span class="left">Tout droits réservés, genre pas touche hein !</span>
+    </footer>
+</body>
+</html>

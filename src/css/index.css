@@ -1,0 +1,72 @@
+body{
+    background: #0f0f0f url("../img/background.png");
+    background-size: 100vw 100vh;
+
+    /* Cuz I hate selection */
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* IE/Edge */
+    user-select: none;           /* non-prefixed version, currently not supported by any browser */
+}
+
+ul{
+    display: block;
+    top: calc( (100vh - 30vh) / 2 );
+    position: relative;
+}
+
+ul li {
+    display: table-cell;
+    width: 25vw;
+    height: 30vh;
+    vertical-align: middle;
+}
+
+ul li img, ul li span{
+    display: block;
+    text-align: center;
+    margin: auto;
+    font: 700 4vh Amaranth, sans-serif;
+    color: rgba(255, 255, 255, 0.9);
+    transition: font-size 100ms;
+}
+
+
+ul li img, ul li:active img{
+    height: calc( 5vh + 4vw );
+    width: calc( 5vh + 4vw );
+    border-radius: 50%;
+}
+
+ul li:hover img{
+    transition: height 100ms, width 100ms;
+    height: calc( 5vh + 5vw );
+    width: calc( 5vh + 5vw );
+}
+
+ul li:active img{
+    height: calc( 5vh + 4vw );
+    width: calc( 5vh + 4vw );
+    border-radius: 50%;
+}
+
+ul li:hover span{
+    font-size: 4.2vh;}
+
+ul li:active span{
+    font-size: 4vh;
+}
+
+ul li:first-child span{color: rgba(16, 16, 16, 0.9);}
+
+footer{
+    display: block;
+    position: fixed;
+    bottom:0;
+    left:0;
+    color: rgba(255, 255, 255, 0.5);
+    height: 3vh;
+    font:2vh Amaranth, sans-serif;
+}
