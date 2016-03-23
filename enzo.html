@@ -27,7 +27,7 @@
 
         $(document).ready(function() {
             if ((1 + Math.floor(Math.random() * 10))==3){ // Fun 1 time over 10
-                $("img.id").css({"border-radius": "50% 50% 12.5%", "padding-left": "1.5vw"});
+                $("img.id").css({"border-radius": "50% 50% 50% 12.5%", "padding-left": "1.5vw"});
                 $(".nav").css({"transform" : "translate(-1vh, 0px)"});
             }
 
@@ -65,7 +65,7 @@
                 var att = $("#attri");
                 var text = qual[qual.indexOf(att.text().replace(".",""))+1]!=undefined ? qual[qual.indexOf(att.text().replace(".",""))+1] : qual[0];
                 att.fadeOut(function(){att.text(text+".")}).fadeIn();
-            },2000);
+            },8000);
 
 
 
@@ -92,17 +92,23 @@
 
     --><section class="container">
         <section id="top" class="active">
-            <div>
-                <h2  class="resume">Le Me</h2>
-                <div class="resume content">
-                    <span id="day"></span>, je suis Enzo Mallard, un petit étudiant en IUT d'informatique qui aime les technos en tout genre. <br><br>
+            <div class="resume">
+                <h2>Le Me</h2>
+                <div class="content">
+                    <span id="day"></span>, je suis Enzo Mallard, un petit étudiant en IUT d'informatique qui aime les technos en tout genre.
                 </div>
 
                 <h2>Je suis <span id="attri">curieux</span></h2>
+                <div class="content">
 
-                <h2 class="socials">Retrouvez-moi un peu partout</h2>
-                <div class="socials">
-                    <a style="background-position: 0 0" id="Twitter" href="http://twitter.com/Maitre_Git"></a><!--
+
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas commodo laoreet varius. Suspendisse porta ex in felis hendrerit, eget dictum orci accumsan. Etiam et enim et diam iaculis varius. Morbi commodo ligula in dui blandit convallis. Donec lorem diam, porta quis ipsum id, mattis faucibus libero. Proin rutrum feugiat magna, quis accumsan nisi tincidunt sed. Etiam ultricies, massa in consectetur malesuada, urna odio fermentum enim, ac sagittis neque lorem id justo. Quisque porttitor convallis ornare. Proin facilisis finibus aliquet.<br>
+                    Aenean sagittis lorem in auctor hendrerit. Aliquam bibendum lacus nec magna dapibus, vitae malesuada neque egestas. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent pellentesque maximus velit, at dictum ligula pretium egestas. Morbi facilisis nulla quis eros viverra vehicula. Vestibulum at venenatis velit. Duis congue imperdiet interdum.
+                </div>
+            </div>
+            <h2 class="socials">Retrouvez-moi un peu partout</h2>
+            <div class="socials">
+                <a style="background-position: 0 0" id="Twitter" href="http://twitter.com/Maitre_Git"></a><!--
                  --><a style="background-position: calc(100% / 3) 0" id="Facebook" href="http://twitter.com/Maitre_Git"></a><!--
                  --><a style="background-position: calc(200% / 3) 0" id="Steam" href="http://steamcommunity.com/id/xoman_zheo/"></a><!--
                  --><a style="background-position: 100% 0" id="Google" href="http://google.com/minus"></a><!--
@@ -114,10 +120,18 @@
                  --><a style="background-position: 100% 100%" id="GitHub" href="http://github.com/EnzDev"></a><!--
                  --><a style="background-position: calc(100% / 3) 100%" id="StackOverflow" href="http://stackoverflow.com/users/5592332/e-mallard?tab=profile"></a><!--
                  --><a style="background-position: calc(200% / 3) 100%" id="Reddit" href="https://www.reddit.com/user/maitre_git/"></a>
+            </div>
+        </section>
+        <section id="formation">
+            <div class="container">
+                <div>
+                    <h2>2015 &mdash; Bacalauréat Scientifique - SI</h2>
+                    <div class="content">
+
+                    </div>
                 </div>
             </div>
         </section>
-        <section id="formation">B content</section>
         <section id="competences">C content</section>
         <section id="experiences">D content</section>
         <section id="centresInteret">E content</section>

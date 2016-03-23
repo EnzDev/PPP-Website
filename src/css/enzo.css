@@ -50,6 +50,10 @@ header a.id{
     text-align: left;
 }
 
+header a.nav:hover:not(.active){
+    color: #224 !important;
+}
+
 header li:nth-child(2){margin-bottom: 8vh;}
 
 .nav{
@@ -89,6 +93,8 @@ h2{
     font-size: calc((2.1vh + 2.1vw) / 2);
 }
 
+h2:not(:first-child){margin-top: 3vh;}
+
 .container {
     display: flex;
     height: 100vh;
@@ -105,8 +111,16 @@ h2{
 
 .container > .active{
     height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
+.resume{
+    margin-top: 1vh;
+    height: 99vh;
+    flex-direction: column;
+    display: flex;
+}
 
 /* LE-ME */
 h2.socials{
@@ -120,9 +134,11 @@ div.socials {
 }
 
 .content{
-    margin-left: 1vw;
+    margin: 0 1vw;
     font-family: theano-didot,serif;
     font-size: calc( (1.5vh + 1.5vw) / 2);
+    text-align: justify;
+    word-spacing: 0.3vw;
 }
 
 .socials a{
@@ -138,6 +154,20 @@ div.socials {
     background-image: url("../img/socialEna.png");
 }
 
+
+/* FORMATION */
+
+#formation .container{
+    padding: 1vh 1vw;
+    display: flex;
+    width: auto;
+    height: auto;
+}
+
+#formation .container div{
+    display: block;
+    width: auto;
+}
 
 /* FOOTER */
 footer{
