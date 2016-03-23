@@ -39,6 +39,9 @@ h4 {
 .Comp-cont .Comp-lvl .neuf {
     width: 90%;
 }
+.Comp-cont .Comp-lvl .dix {
+    width: 100%;
+}
 .Comp-nom{
     font-family: sans-serif;
     float: left;
