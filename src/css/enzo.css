@@ -169,6 +169,33 @@ div.socials {
     width: auto;
 }
 
+/* COMPETENCES */
+
+.tirette{
+<!-- right:0; -->
+    right:-10vw;
+    position: absolute;
+    display: block;
+}
+
+
+
+.tirette ul{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-around;
+}
+
+.tirette ul li{
+    display: flex;
+    align-self: center;
+}
+
+.tirette img{
+    height: 10vh;
+}
+
 /* FOOTER */
 footer{
     display: none;
