@@ -1,2 +1,2 @@
 # PPP-Website
- * C'est le site web qu'on doit fqire en PPP ! \o/\o/ :cake: \o/\o/ 
+ * C'est le site web qu'on doit faire en PPP ! `\o/\o/ \o/\o/ `
