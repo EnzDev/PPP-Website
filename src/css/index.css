@@ -1,6 +1,15 @@
+html{background: #ff937b; }
 body{
-    background: #0f0f0f url("../img/background.png");
-    background-size: 100vw 100vh;
+  background-image:
+/* image*/ url("../img/tesFond4.png"),
+/* color one#e53935*/  linear-gradient(to top, #e53935, #e53935),
+/* Color two #ff785b*/  linear-gradient(to bottom, #ff937b, #ff937b);
+
+
+    background-size: 100vw 48vh;
+    background-position: top;
+    background-repeat: no-repeat;
+
 
     /* Cuz I hate selection */
     -webkit-touch-callout: none; /* iOS Safari */
@@ -24,29 +33,29 @@ ul li {
     vertical-align: middle;
 }
 
-ul li img, ul li span{
+ul li img.av, ul li span{
     display: block;
     text-align: center;
     margin: auto;
     font: 700 4vh Amaranth, sans-serif;
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(16, 16, 16, 0.9);
     transition: font-size 100ms;
 }
 
 
-ul li img, ul li:active img{
+ul li img.av, ul li:active img.av{
     height: calc( 5vh + 4vw );
     width: calc( 5vh + 4vw );
     border-radius: 50%;
 }
 
-ul li:hover img{
+ul li:hover img.av{
     transition: height 100ms, width 100ms;
     height: calc( 5vh + 5vw );
     width: calc( 5vh + 5vw );
 }
 
-ul li:active img{
+ul li:active img.av{
     height: calc( 5vh + 4vw );
     width: calc( 5vh + 4vw );
     border-radius: 50%;
@@ -58,8 +67,11 @@ ul li:hover span{
 ul li:active span{
     font-size: 4vh;
 }
-
-ul li:first-child span{color: rgba(16, 16, 16, 0.9);}
+ul#clee img{
+height: 50%;
+bottom: 0px;
+position: fixed;
+}
 
 footer{
     display: block;
