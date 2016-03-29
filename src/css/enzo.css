@@ -217,17 +217,17 @@ div.socials {
     height: 15vh;
     width: 2vw;
     border-radius: 1.5vw 0 0 1.5vw;
-    border-color: rgba(255, 133, 67, 0.2);
+    border-color: #EDE1CB;
     border-style: solid;
     border-width: 1px 0 1px 1px;
-    background-color: rgba(255, 133, 67, 0.2);
+    background-color: #F9EDD7;
 }
 
 .tirette {
     right: 0;
     position: relative;
     display: block;
-    background-color: rgba(255, 133, 67, 0.1);
+    background-color: #F9EDD7;
 }
 
 .tirette::before{
@@ -262,6 +262,12 @@ div.socials {
 #lang{
     height: 20vh;
     position: relative;
+    display: flex;
+    justify-content: space-around;
+    flex-basis: -moz-fit-content;
+    background: RGBA(255, 126, 126, 0.2);
+    color: rgba(0, 0, 0,0.9);
+    box-shadow: 0 -1px 0 #F6B891;
 }
 
 #lang pre{
@@ -273,6 +279,23 @@ div.socials {
     right: 1vw;
     bottom: 0.2em;
     line-height: 1em;
+}
+
+.legend{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 20vh;
+    margin-left: 1vw;
+    width: 26vw;
+}
+
+.legend li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9em;
+    order: 9999;
 }
 
 /* FOOTER */

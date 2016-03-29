@@ -34,7 +34,7 @@
 
             $("header").animate({"left": 0});
             $("section section").hide();
-            $('#competences').show();
+            $('#top').show();
 
             if ((new Date().getHours())<8 ||(new Date().getHours())>=20 ){ // Set the text depending of the local time YAY !
                 //Bonsoir
@@ -196,7 +196,31 @@
             </ul>
         </div>
         <div id="lang">
-            <pre>J'ai d'autres compétences ! Allez voir sur le coté !<br>Les compétences en rouge sont mes compétences en cours d'apprentissage</pre>
+            <ul style="display: flex; flex-direction: column; justify-content: space-around; height: 20vh; margin-left: 1vw; width: 26vw;" class="legend">
+                <li>
+                    Langage en cours d'apprentissage
+                    <div style="width: 5vw" class="meter train">
+                        <span style="width: 100%"></span>
+                    </div>
+                </li>
+                <li>
+                    Fin d'étude du langage ou en suspend
+                    <div class="meter" style="width: 5vw">
+                        <span style="width: 100%"></span>
+                    </div>
+                </li>
+            </ul>
+            <ul style="display: flex; flex-direction: column; justify-content: space-around; height: 20vh; margin-left: 1vw; width: 26vw;" class="legend">
+                <li>Français<div style="" class="">
+                    Je suis natif de la France !
+                </div>
+                </li>
+                <li style="order: 99;">Autres<div style="" class="">음, 글쎄</div>
+                </li>
+                <li>Anglais<abbr title="I'm able to write and understand any programming doc !">I'm ok ! I promise !</abbr>
+                </li>
+            </ul>
+
 
         </div>
         <div id="grph">
