@@ -88,7 +88,7 @@ header li:last-child{
 }
 
 /* CONTAINER */
-h2{
+h2, .title{
     margin-left: 3vw;
     font-size: calc((2.1vh + 2.1vw) / 2);
 }
@@ -170,21 +170,84 @@ div.socials {
 }
 
 /* COMPETENCES */
+#competences{flex-direction: column;}
 
-.tirette{
-<!-- right:0; -->
-    right:-10vw;
-    position: absolute;
-    display: block;
+#main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 85vw;
+}
+
+#main ul{
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 26vw;
+}
+
+#main li{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#main img{
+    height: 10vh;
+    outline-width: 10vh;
 }
 
 
+#grph{
+    top:0;
+    position: fixed;
+    right: -9vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: right 1s ease;
+}
+
+#grph:hover{right: 0;}
+
+#grph .pull {
+    vertical-align: middle;
+    height: 15vh;
+    width: 2vw;
+    border-radius: 1.5vw 0 0 1.5vw;
+    border-color: rgba(255, 133, 67, 0.2);
+    border-style: solid;
+    border-width: 1px 0 1px 1px;
+    background-color: rgba(255, 133, 67, 0.2);
+}
+
+.tirette {
+    right: 0;
+    position: relative;
+    display: block;
+    background-color: rgba(255, 133, 67, 0.1);
+}
+
+.tirette::before{
+    content: "";
+    border-style: solid;
+    height: 100vh;
+    display: inline-block;
+    border-width: 0 1px 0 0;
+    vertical-align: bottom;
+    border-color: rgba(255, 133, 67,0.2);
+}
 
 .tirette ul{
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     height: 100vh;
     justify-content: space-around;
+    filter: grayscale(75%) contrast(150%);
+    -webkit-filter: grayscale(75%) contrast(150%);
+    -ms-filter: grayscale(60%)
 }
 
 .tirette ul li{
@@ -193,7 +256,23 @@ div.socials {
 }
 
 .tirette img{
-    height: 10vh;
+    height: 7vh;
+}
+
+#lang{
+    height: 20vh;
+    position: relative;
+}
+
+#lang pre{
+    position: absolute;
+    display: inline-block;
+    font-size: 0.8em;
+    padding-left: 1vw;
+    text-align: right;
+    right: 1vw;
+    bottom: 0.2em;
+    line-height: 1em;
 }
 
 /* FOOTER */
@@ -205,4 +284,65 @@ footer{
     width: 100vw;
     text-align: right;
     z-index: -10;
+}
+
+/* TESTS */
+.meter{
+    width: 16vw;
+    position: relative;
+    background: rgb(216, 216, 216) none repeat scroll 0% 0%;
+    border-radius: 3vh;
+    box-shadow: 0px -2px 2px rgba(255, 255, 255, 0.3) inset;
+    padding: 1vh;
+    height: 2.5vh;
+    /*margin: 60px 0 20px 0;*/
+    -moz-border-radius: 3vh;
+    -webkit-border-radius: 3vh;
+    -webkit-box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);
+    -moz-box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);
+}
+
+.meter > span{
+    display: block;
+    height: 100%;
+    background-color: rgb(255, 223, 112);
+    box-shadow: 0px 2px 9px rgba(255, 255, 255, 0.3) inset, 0px -2px 6px rgba(0, 0, 0, 0.4) inset;
+    position: relative;
+    background-image: -moz-linear-gradient(center bottom , rgb(255, 229, 139) 37%, rgb(255, 203, 124) 69%);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.meter.train > span{
+    background-color: rgb(255, 165, 108);
+    background-image: -moz-linear-gradient(center bottom , rgb(255, 162, 98) 37%, rgb(255, 124, 100) 69%);
+}
+.meter > span:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.25, rgba(255, 255, 255, .2)), color-stop(.25, transparent), color-stop(.5, transparent), color-stop(.5, rgba(255, 255, 255, .2)), color-stop(.75, rgba(255, 255, 255, .2)), color-stop(.75, transparent), to(transparent) );
+    background-image: -moz-linear-gradient( -45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent );
+    z-index: 1;
+    -webkit-background-size: 50px 50px;
+    -moz-background-size: 50px 50px;
+
+    -webkit-border-top-right-radius: 8px;
+    -webkit-border-bottom-right-radius: 8px;
+    -moz-border-radius-topright: 8px;
+    -moz-border-radius-bottomright: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+
+    -webkit-border-top-left-radius: 20px;
+    -webkit-border-bottom-left-radius: 20px;
+    -moz-border-radius-topleft: 20px;
+    -moz-border-radius-bottomleft: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+    overflow: hidden;
 }
