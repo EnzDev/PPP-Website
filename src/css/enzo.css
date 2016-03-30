@@ -79,7 +79,7 @@ header li:last-child{
 }
 
 .hme{
-    background-image: url("../img/home.png");
+    background-image: url("../img/res-enzo/home.png");
     background-size: 100% 100%;
     width: 7.5vh;
     height: 7.5vh;
@@ -117,9 +117,10 @@ h2:not(:first-child){margin-top: 3vh;}
 
 .resume{
     margin-top: 1vh;
-    height: 99vh;
+    height: 65vh;
     flex-direction: column;
     display: flex;
+    justify-content: space-between;
 }
 
 /* LE-ME */
@@ -147,11 +148,11 @@ div.socials {
     height: calc(61vw / 12);
     background-size: 400% 300%;
     margin: 0 1vw;
-    background-image: url('../img/socialDisa.png');
+    background-image: url('../img/res-enzo/socialDisa.png');
 }
 
 .socials a:hover{
-    background-image: url("../img/socialEna.png");
+    background-image: url("../img/res-enzo/socialEna.png");
 }
 
 
@@ -203,7 +204,7 @@ div.socials {
 #grph{
     top:0;
     position: fixed;
-    right: -9vh;
+    right: -11.5vh;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -237,7 +238,7 @@ div.socials {
     display: inline-block;
     border-width: 0 1px 0 0;
     vertical-align: bottom;
-    border-color: rgba(255, 133, 67,0.2);
+    border-color: #F9EDD7;
 }
 
 .tirette ul{
@@ -245,14 +246,35 @@ div.socials {
     flex-direction: column;
     height: 100vh;
     justify-content: space-around;
-    filter: grayscale(75%) contrast(150%);
-    -webkit-filter: grayscale(75%) contrast(150%);
-    -ms-filter: grayscale(60%)
+    /*filter: grayscale(75%) contrast(150%);*/
+    /*-webkit-filter: grayscale(75%) contrast(150%);*/
+    /*-ms-filter: grayscale(60%)*/
 }
 
 .tirette ul li{
     display: flex;
     align-self: center;
+    margin: 0 0.35vw;
+    text-align: center;
+    font-size: 2.35vh;
+}
+
+.tirette ul li.a{
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+    -ms-filter: grayscale(0%)
+}
+
+.tirette ul li.b{
+    filter: grayscale(60%) contrast(150%);
+    -webkit-filter: grayscale(60%) contrast(150%);
+    -ms-filter: grayscale(50%)
+}
+
+.tirette ul li.c{
+    filter: grayscale(80%) contrast(150%);
+    -webkit-filter: grayscale(80%) contrast(150%);
+    -ms-filter: grayscale(70%)
 }
 
 .tirette img{
@@ -298,6 +320,142 @@ div.socials {
     order: 9999;
 }
 
+/* EXPERIENCES */
+/* TOO MANY !!! OMAGAD !! */
+#experiences {
+    flex-direction: column;
+    height:100vh;
+}
+
+#experiences ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    margin-left: 4vw;
+    margin-top: 5vh;
+}
+
+#experiences span{ /* EN FAIT C'EST DES DIV */
+    display: block;
+}
+
+#experiences ul li{
+    flex-grow: 1;
+    position: relative;
+}
+
+#experiences li .desc,#experiences li .note{
+    font-family: theano-didot,serif;
+    font-size: calc( (1.6vh + 1.7vw) / 2);
+    text-align: justify;
+    margin-left: 1vw;
+}
+
+#experiences li .note{font-size: calc( (1.4vh + 1.4vw) / 2);}
+
+#experiences li .note::before{
+    content: "\25BA\0009";
+}
+
+#experiences li::before{
+    content: "";
+    background-color: #7B4946;
+    border: #7B4946 0.2vw solid;
+    height: 90%;
+    position: absolute;
+    display: block;
+    top: 0.5em;
+    left: -0.75vw;
+    border-radius: 1vw;
+}
+
+#experiences li .date::before{
+    content: "";
+    background-color: #7B4946;
+    border: #7B4946 0.5vw solid;
+
+    position: absolute;
+    display: block;
+    top: 0.25em;
+    left: -1.05vw;
+    border-radius: 2vw;
+}
+
+/* CENTRE INTERETS */
+#centresInteret{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.intro{
+    padding: 1vh 0 0 5vw;
+    font-size: calc(0.8vh + 0.8vw);
+}
+
+.carousel,.piano{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+#photos img {
+    position: relative;
+    height: 26vh;
+    margin: 5px;
+}
+
+#centresInteret .note{
+    font-family: theano-didot,serif;
+    font-size: calc( (1.5vh + 1.5vw) / 2);
+    text-align: justify;
+    margin-left: 1vw;
+    margin-top: 1vh;
+}
+
+
+/* CONTACT */
+.card-content {
+    padding: 20px;
+    background-color: #546e7a;
+    position: relative;
+    margin: 0.5rem 0 1rem 0;
+    transition: box-shadow .25s;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    width: 180px;
+    top: 40vh;
+    left: 33vw;
+}
+.white-text {
+    color: #fff !important;
+    font-family: "Roboto", sans-serif;
+}
+
+.card-content .card-title {
+    line-height: 48px;
+}
+.card-title {
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.card-content p {
+    margin: 0;
+    color: inherit;
+}
+
+.footer{
+    position: fixed;
+    bottom: 0.2em;
+    right: 0.2em;
+    width: 100vw;
+    text-align: right;
+    z-index: -10;
+}
+
 /* FOOTER */
 footer{
     display: none;
@@ -313,9 +471,9 @@ footer{
 .meter{
     width: 16vw;
     position: relative;
-    background: rgb(216, 216, 216) none repeat scroll 0% 0%;
+    background: rgb(216, 216, 216) none repeat scroll 0 0;
     border-radius: 3vh;
-    box-shadow: 0px -2px 2px rgba(255, 255, 255, 0.3) inset;
+    box-shadow: 0 -2px 2px rgba(255, 255, 255, 0.3) inset;
     padding: 1vh;
     height: 2.5vh;
     /*margin: 60px 0 20px 0;*/
@@ -329,7 +487,7 @@ footer{
     display: block;
     height: 100%;
     background-color: rgb(255, 223, 112);
-    box-shadow: 0px 2px 9px rgba(255, 255, 255, 0.3) inset, 0px -2px 6px rgba(0, 0, 0, 0.4) inset;
+    box-shadow: 0 2px 9px rgba(255, 255, 255, 0.3) inset, 0 -2px 6px rgba(0, 0, 0, 0.4) inset;
     position: relative;
     background-image: -moz-linear-gradient(center bottom , rgb(255, 229, 139) 37%, rgb(255, 203, 124) 69%);
     border-radius: 20px;
@@ -368,4 +526,9 @@ footer{
     border-bottom-left-radius: 20px;
 
     overflow: hidden;
+}
+
+
+abbr{
+    cursor: vertical-text;
 }
